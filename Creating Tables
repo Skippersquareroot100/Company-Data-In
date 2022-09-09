@@ -16,7 +16,7 @@ Create Table Branch
     Branch_Name Varchar(15),
     mgr_id INT,
     mgr_start_date DATE,
-    Foreign KEY (mgr_id) references Employee(Emp_ID) on delete set NULL
+    Foreign KEY (mgr_id) references Employee1(Emp_ID) on delete set NULL
 );
 
 Alter Table Employee1
