@@ -9,5 +9,54 @@ Where Emp_ID=100;
 
 Insert into Employee1 Values(101, 'Jan', 'Levinson', '1961-05-11', 'M', 110000, 100, 1);
 
+
+
+Update Employee1
+Set Sex='F'
+Where Emp_ID=101;
+
+
+--Scranton
+
+Insert into Employee1 Values (102, 'Jan', 'Levinson', '1961-05-11', 'M', 75000, 100, NULL);
+
+Insert into Branch VALUES(2,'Scranton', 102, '1992-04-06');
+
+Update Employee1
+Set Branch_ID =2
+Where Emp_ID =102;
+
+Update Employee1
+Set First_Name='Michael'
+where Emp_ID=102;
+
+Update Employee1
+Set Last_Name='Scott'
+where Emp_ID=102;
+
+Update Employee1
+Set Birth_Date='1964-03-15'
+where Emp_ID=102;
+
+
+Insert into Employee1 Values (103, 'Angela', 'Martin', '1971-06-25', 'F', 63000, 102, 2);
+Insert into Employee1 Values (104, 'Kelly', 'Kapoor', '1980-02-05', 'F', 55000, 102, 2);
+Insert into Employee1 Values (105, 'Stanley', 'Hudson', '1958-02-19', 'M', 69000, 102, 2);
+
 Select * From Employee1;
+Select * From Branch;
+
+-- Stamford
+
+
+Insert into Employee1 VALUES(106, 'Josh','Porter', '1969-09-05', 'M', 78000,100,null);
+Insert into Branch values(3, 'Stamford', 106,'1998-02-13');
+
+Update Employee1
+Set Branch_ID=3
+Where Emp_ID=106;
+
+Insert into Employee1 VALUES(107, 'Andy','Bernard', '1973-07-22', 'M',65000,106,3);
+Insert into Employee1 VALUES(108, 'Jim','Halpert', '1978-10-01', 'M',71000,106,3);
+
 
