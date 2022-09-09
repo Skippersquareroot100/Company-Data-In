@@ -1,0 +1,26 @@
+--Find all employee
+Select * from Employee1;
+--Find all Client1
+Select * from Client1;
+--Find all employee by Salary
+Select * from Employee1
+order by Salary Desc;
+--Find all employee by sex then name
+Select * from Employee1
+order by Sex, First_Name, Last_Name;
+--Find the first 5 employee in the table
+Select * from Employee1
+limit 5;
+--find the first and last name of employees
+Select First_Name , Last_Name
+From Employee1;
+--Find the forename and surename names of all employees 
+Select First_Name as Forname, Last_Name as Suname
+from Employee1;
+--Find of all genders 
+select Distinct Sex
+from Employee1;
+--Find of all Suppliers name
+select Distinct Supplier_Name
+from Branch_Supplier;
+select * from Branch_Supplier;
