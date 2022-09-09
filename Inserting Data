@@ -60,3 +60,19 @@ Insert into Employee1 VALUES(107, 'Andy','Bernard', '1973-07-22', 'M',65000,106,
 Insert into Employee1 VALUES(108, 'Jim','Halpert', '1978-10-01', 'M',71000,106,3);
 
 
+--Branch Supplier
+Insert into Branch_Supplier values(2, 'Hammer Mill', 'Paper');
+Insert into Branch_Supplier values(2, 'Uni-ball', 'Writing Utensils');
+Insert into Branch_Supplier values(3, 'Patriot Paper', 'Paper');
+Insert into Branch_Supplier values(2, 'J.T. Froms & Lables', 'Custom');
+Insert into Branch_Supplier values(3, 'Uni-ball', 'Writing Utensils');
+Insert into Branch_Supplier values(3, 'Hammer Mill', 'Paper');
+Insert into Branch_Supplier values(3, 'Stamford Labels', 'Custom Forms');
+
+Update Branch_Supplier
+set Supply_Type='Custom Forms'
+Where Supplier_Name='J.T. Froms & Lables';
+
+Select * From Branch_Supplier
+order by Supply_Type Asc;
+
