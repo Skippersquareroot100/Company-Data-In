@@ -1,0 +1,30 @@
+--Creating Table
+Create Table Employee1
+(
+    Emp_ID INT Primary KEY,
+    First_Name Varchar(15),
+    Last_Name Varchar(15),
+    Birth_Date Date,
+    Sex Varchar(1),
+    Salary INT,
+    Super_ID int,
+    Branch_ID int
+);
+Create Table Branch
+(
+    Branch_ID INT Primary KEY,
+    Branch_Name Varchar(15),
+    mgr_id INT,
+    mgr_start_date DATE,
+    Foreign KEY (mgr_id) references Employee(Emp_ID) on delete set NULL
+);
+
+Alter Table Employee1
+ADD FOREIGN KEY(Branch_ID)
+REFERENCES Branch (Branch_ID)
+ON Delete set null;
+
+Alter table Employee1
+Add Foreign KEY (Super_ID)
+References Employee1(Emp_ID)
+On delete set null;
