@@ -28,3 +28,32 @@ Alter table Employee1
 Add Foreign KEY (Super_ID)
 References Employee1(Emp_ID)
 On delete set null;
+
+Create TABLE Client1
+(
+    Client_ID INT PRIMARY KEY,
+    Client_Name Varchar(20),
+    Branch_ID INT,
+    Foreign KEY(Branch_ID) References Branch(Branch_ID) On Delete Set Null
+
+);
+
+Create TABLE Works_With
+(
+   Emp_ID INT,
+   Client_ID INT,
+   Toatal_Sells INT,
+   PRIMARY KEY (Emp_ID,Client_ID),
+  Foreign Key (Emp_ID) References Employee1(Emp_ID) on delete  CASCADE,
+  Foreign Key (Client_ID) References Client1(Client_ID) on delete  CASCADE
+);
+    
+    
+ Create Table Branch_Supplier
+(
+   Branch_ID INT,
+   Supplier_Name Varchar(20),
+   Supply_Type Varchar(20),
+   Primary Key (Branch_ID,Supplier_Name),
+   Foreign KEY (Branch_ID) References Branch(Branch_ID) on delete cascade
+);
