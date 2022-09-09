@@ -76,3 +76,44 @@ Where Supplier_Name='J.T. Froms & Lables';
 Select * From Branch_Supplier
 order by Supply_Type Asc;
 
+--Branch Supplier
+Insert into Branch_Supplier values(2, 'Hammer Mill', 'Paper');
+Insert into Branch_Supplier values(2, 'Uni-ball', 'Writing Utensils');
+Insert into Branch_Supplier values(3, 'Patriot Paper', 'Paper');
+Insert into Branch_Supplier values(2, 'J.T. Froms & Lables', 'Custom');
+Insert into Branch_Supplier values(3, 'Uni-ball', 'Writing Utensils');
+Insert into Branch_Supplier values(3, 'Hammer Mill', 'Paper');
+Insert into Branch_Supplier values(3, 'Stamford Labels', 'Custom Forms');
+
+Update Branch_Supplier
+set Supply_Type='Custom Forms'
+Where Supplier_Name='J.T. Froms & Lables';
+
+Select * From Branch_Supplier
+order by Supply_Type Asc;
+
+--Client1
+Insert Into Client1 VALUES(400,'Dunmore HighScl',2);
+Insert Into Client1 VALUES(401,'lackawana Country',2);
+Insert Into Client1 VALUES(402,'FedEx',3);
+Insert Into Client1 VALUES(403,'Jhon Daily lAW,llc',3);
+Insert Into Client1 VALUES(404,'Scrantons Whitepages',2);
+Insert Into Client1 VALUES(405,'Times Newspaper',3);
+Insert Into Client1 VALUES(406,'FedEx',2);
+Select * From Client1;
+
+--Works_With
+Insert into Works_With values(105, 400, 55000);
+Insert into Works_With values(102, 401, 267000);
+Insert into Works_With values(108, 402, 22500);
+Insert into Works_With values(107, 403, 5000);
+Insert into Works_With values(108, 403, 12000);
+Insert into Works_With values(105, 404, 33000);
+Insert into Works_With values(107, 405, 26000);
+Insert into Works_With values(102, 406, 15000);
+Insert into Works_With values(105, 406, 130000);
+
+Select * from Works_With
+order by Toatal_Sells Desc;
+
+
