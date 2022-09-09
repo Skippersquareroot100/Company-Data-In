@@ -1,1 +1,13 @@
+-- Corporate
+Insert Into Employee1 VALUES(100, 'David', 'Wallace', '1967-11-17', 'M', 250000, NUll, NULL);
+
+Insert Into Branch VALUES(1, 'Corporate' , 100 , '2006-02-09');
+
+Update Employee1
+Set Branch_ID =1
+Where Emp_ID=100;
+
+Insert into Employee1 Values(101, 'Jan', 'Levinson', '1961-05-11', 'M', 110000, 100, 1);
+
+Select * From Employee1;
 
