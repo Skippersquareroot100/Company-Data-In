@@ -1,0 +1,30 @@
+--Find the number of employees 
+Select COUNT(Emp_ID)
+from Employee1;
+
+Select COUNT(Client_ID)
+from Client1;
+
+Select Count(Branch_ID)
+from Branch;
+
+-- Find the number of female employees born after 1970
+Select COUNT(Emp_ID)
+from Employee1
+where Sex='F' AND Birth_Date > 01-01-1971;
+
+--Find the  all employee avg salary
+Select Avg(Salary)
+From Employee1;
+
+Select Avg(Salary)
+From Employee1
+where Sex='M';
+
+Select Avg(Salary)
+From Employee1
+where Sex='F';
+
+--Find the  all employee Sum salary
+Select SUM(Salary)
+From Employee1;
